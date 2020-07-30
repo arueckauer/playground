@@ -1,0 +1,45 @@
+{
+  "name": "arueckauer/playground",
+  "type": "project",
+  "description": "Andi's playground",
+  "homepage": "https://github.com/arueckauer/playground",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Andi Rückauer",
+      "email": "arueckauer@gmail.com",
+      "homepage": "https://arueckauer.github.io/",
+      "role": "Project Lead"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "laminas/laminas-validator": "^2.13"
+  },
+  "require-dev": {
+    "laminas/laminas-coding-standard": "^2.0",
+    "phpunit/phpunit": "^9.2",
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Playground\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PlaygroundTest\\": "test"
+    }
+  },
+  "minimum-stability": "stable",
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@test"
+    ],
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "test": "phpunit --colors=always",
+    "test-coverage": "phpunit --colors=always --coverage-html coverage"
+  }
+}
